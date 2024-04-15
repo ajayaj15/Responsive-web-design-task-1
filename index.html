@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration/Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+        }
+        .form-container img {
+            max-width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .form-content {
+            flex: 1;
+        }
+        .form-content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn.cancel {
+            background-color: #dc3545;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="./assets/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.webp" alt="Event Image">
+        <div class="form-content">
+            <h2>Event Registration/Update</h2>
+            <form id="eventForm" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="seats">Number of Seats:</label>
+                    <input type="number" id="seats" name="seats" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="attendees">Number of Attendees:</label>
+                    <input type="number" id="attendees" name="attendees" min="1" required>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="cancelForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function cancelForm() {
+            alert("Form submission canceled.");
+           
+        }
+    </script>
+</body>
+</html>
